@@ -30,3 +30,48 @@ reporting_status: notstarted
 sort: ''
 standalone: false
 tags: []
+auto_progress_calculation: true
+progress_calculation_options:
+  - series: Series1 #target reached?
+    disaggregation: 
+        - field: Group
+          value: A
+    target: 2
+    target_year: 2030
+    direction: positive
+  - series: Series1 #target reached?
+    disaggregation:
+      - field: Group
+        value: B
+    target: 2
+    target_year: 2030
+    direction: negative
+  - series: Series1 #deterioration?
+    disaggregation:
+      - field: Group
+        value: C
+    target: 0
+    target_year: 2030
+    direction: negative
+  - series: Series2 #progress made?
+    disaggregation:
+      - field: Group
+        value: A
+    target: 8
+    target_year: 2030
+    direction: positive
+  - series: Series2 #deterioration?
+    disaggregation:
+      - field: Group
+        value: B
+    target: 5
+    target_year: 2025
+    direction: negative
+  - series: Series2 #target reached?
+    disaggregation:
+      - field: Group
+        value: C
+    target: 10
+    target_year: 2025
+    direction: positive
+progress_status: ''
